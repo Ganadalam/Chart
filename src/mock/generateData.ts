@@ -1,4 +1,10 @@
-import { Candle } from "../core/Chart";
+export interface Candle {
+  time: number;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+}
 
 export function generateData(n = 200): Candle[] {
   const arr: Candle[] = [];
@@ -13,6 +19,7 @@ export function generateData(n = 200): Candle[] {
   }
   return arr;
 }
+
 // export function generateData(n: number) {
 //   const data = [];
 //   let last = 200;
